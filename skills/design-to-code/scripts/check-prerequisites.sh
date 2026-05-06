@@ -17,37 +17,8 @@ elif [ -f "$PROJECT_ROOT/CLAUDE.md" ] && \
      grep -qi "技术栈\|vue\|react\|uni-app\|angular\|svelte\|framework\|stack" "$PROJECT_ROOT/CLAUDE.md"; then
   TECH_STACK_FILE="CLAUDE.md"
 elif [ -f "$PROJECT_ROOT/package.json" ]; then
-  FRAMEWORK=""
-  grep -q '"@dcloudio/' "$PROJECT_ROOT/package.json"           && FRAMEWORK="uni-app + Vue"
-  grep -q '"@tarojs/taro"' "$PROJECT_ROOT/package.json"       && FRAMEWORK="Taro + Vue"
-  grep -q '"vue"' "$PROJECT_ROOT/package.json" && [ -z "$FRAMEWORK" ] && FRAMEWORK="Vue"
-  grep -q '"nuxt"' "$PROJECT_ROOT/package.json"               && FRAMEWORK="Nuxt"
-  [ -f "$PROJECT_ROOT/project.config.json" ] && [ -z "$FRAMEWORK" ]  && FRAMEWORK="微信原生小程序"
-  [ -f "$PROJECT_ROOT/mini.project.json" ] && [ -z "$FRAMEWORK" ]    && FRAMEWORK="支付宝原生小程序"
-  [ -z "$FRAMEWORK" ] && FRAMEWORK="未知框架"
-
-  LANG="JavaScript"
-  grep -q '"typescript"\|"@types/"' "$PROJECT_ROOT/package.json" && LANG="TypeScript"
-
-  UI_LIB=""
-  grep -q '"element-plus"\|"element-ui"' "$PROJECT_ROOT/package.json" && UI_LIB=" + Element Plus"
-  grep -q '"ant-design-vue"\|"antd"' "$PROJECT_ROOT/package.json"     && UI_LIB=" + Ant Design"
-  grep -q '"vant"' "$PROJECT_ROOT/package.json"                       && UI_LIB=" + Vant"
-  grep -q '"@nutui"' "$PROJECT_ROOT/package.json"                     && UI_LIB=" + NutUI"
-
-  PROJECT_NAME=$(basename "$PROJECT_ROOT")
-  cat > "$PROJECT_ROOT/README.md" << EOF
-# $PROJECT_NAME
-
-> 由 design-to-code 前置检查自动生成，请补充完善。
-
-## 技术栈
-
-- 框架：$FRAMEWORK$UI_LIB
-- 语言：$LANG
-EOF
-  TECH_STACK_FILE="README.md（自动生成，请补充完善）"
-  WARN+=("README.md 不存在，已根据 package.json 自动生成，请检查技术栈是否准确")
+  TECH_STACK_FILE="package.json（将从中推断技术栈）"
+  WARN+=("README.md 不存在，将从 package.json 推断技术栈，建议创建 README.md 填写完整技术栈信息")
 fi
 
 if [ -z "$TECH_STACK_FILE" ]; then
