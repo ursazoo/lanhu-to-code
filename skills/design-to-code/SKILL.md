@@ -69,13 +69,13 @@ docs/ 中没有找到组件文档，有三个选项：
 3. 取消
 ```
 
-## 阶段 1：code-gen（subagent）
+## 阶段 1：code-gen
 
-以 subagent 方式调用，传入页面信息。
+使用 Skill 工具调用 `/code-gen`，传入蓝湖页面 URL 作为参数。
+
+code-gen 以隔离的 subagent 运行（`context: fork`），完成后返回路径 + 元素摘要，不会污染主会话上下文。
 
 **URL 无具体页面 ID 时**（如只有 pid 没有 id）：code-gen 会展示该项目的所有设计图列表，等用户选择后才继续，不自动选第一个。
-
-等待返回：输出路径 + 元素摘要。
 
 ## 阶段 2：code-format
 

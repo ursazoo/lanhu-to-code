@@ -20,7 +20,7 @@ AI 生成代码后直接报告"完成"，没有输出 TODO 列表，用户误以
 
 直接在主会话中调用蓝湖 MCP，大量原始 HTML 数据涌入上下文，稀释后续 code-format 读取业务文档的效果。
 
-**防范：** code-gen 必须以 subagent 运行，只返回路径和摘要。
+**防范：** code-gen 通过 `context: fork` 以隔离 subagent 运行，只返回路径和摘要。
 
 ### 文档缺失时静默降级
 

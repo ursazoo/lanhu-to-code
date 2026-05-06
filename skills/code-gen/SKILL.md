@@ -2,9 +2,10 @@
 name: code-gen
 description: 从蓝湖 MCP 获取设计稿 HTML/CSS 和切图。由 design-to-code 显式调用。
 model: sonnet
-disable-model-invocation: true
-metadata:
-  mcp-server: lanhu
+user-invocable: false
+context: fork
+agent: general-purpose
+allowed-tools: mcp__lanhu__*, Read, Write, Bash
 ---
 
 # code-gen
