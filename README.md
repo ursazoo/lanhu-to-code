@@ -54,10 +54,6 @@ TODO:
 
 > A 60-second demo GIF works extremely well for this kind of project. Recommended path: add `assets/demo.gif` and place it here.
 
-## Search Keywords
-
-Lanhu to Code, Lanhu design to code, Claude Code skills, Claude Code design to code, AI frontend code generator, Vue design to code, React design to code, Figma to code alternative, design token mapping, component reuse, 蓝湖转代码, 蓝湖设计稿生成前端代码, Claude Code 前端工作流.
-
 ## Skills
 
 | Skill | Trigger | Purpose |
@@ -139,30 +135,6 @@ claude
 
 Paste a Lanhu page URL when prompted.
 
-## Recommended GitHub Topics
-
-Add these topics in the GitHub repository sidebar:
-
-```text
-claude-code
-claude-code-skills
-lanhu
-lanhu-to-code
-design-to-code
-ai-coding
-frontend
-vue
-react
-design-tokens
-component-reuse
-```
-
-Suggested GitHub description:
-
-```text
-Lanhu to Code for Claude Code: AI design-to-code skills that turn Lanhu designs into Vue/React frontend code with component reuse and design token mapping.
-```
-
 ## Roadmap
 
 - [ ] Add `assets/demo.gif` with a 60-second Lanhu-to-code workflow.
@@ -243,30 +215,6 @@ claude
 ```
 
 粘贴蓝湖页面 URL 后，Claude Code 会按“读取设计稿 -> 生成框架代码 -> 可选审查”的流程执行。
-
-## Launch Copy
-
-Use this when posting to V2EX, Juejin, X, Reddit, or Claude Code communities:
-
-```text
-I built a Claude Code skill that turns Lanhu design links into Vue/React frontend code.
-
-It reads Lanhu through MCP, reuses existing project components, maps raw design values to design tokens, marks uncertain APIs/enums as TODO, and can run a review pass after generation.
-
-GitHub:
-https://github.com/ursazoo/lanhu-to-code
-```
-
-Chinese version:
-
-```text
-我做了一个 Claude Code Skill：粘贴蓝湖链接，自动生成前端页面代码。
-
-它会通过蓝湖 MCP 读取设计稿，优先复用项目已有组件，把颜色和间距映射成项目 design token，不确定的 API / 枚举 / 业务逻辑会标 TODO，生成后还能接 code review。
-
-GitHub:
-https://github.com/ursazoo/lanhu-to-code
-```
 
 ## Feedback
 
