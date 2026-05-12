@@ -1,6 +1,6 @@
 ---
 name: code-gen
-description: 从蓝湖 MCP 获取设计稿 HTML/CSS 和切图。由 design-to-code 显式调用。
+description: Extract Lanhu design HTML, CSS, and assets through Lanhu MCP for Claude Code design-to-code workflows. Called by design-to-code.
 model: sonnet
 user-invocable: false
 context: fork

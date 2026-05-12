@@ -1,5 +1,5 @@
 #!/bin/bash
-# fshows-frontend-skills 安装脚本
+# lanhu-to-code 安装脚本
 # 将 skills/ 目录下的所有 skill 软链接到 ~/.claude/skills/
 #
 # 用法：bash install.sh

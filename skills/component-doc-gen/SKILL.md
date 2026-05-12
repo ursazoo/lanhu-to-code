@@ -1,6 +1,6 @@
 ---
 name: component-doc-gen
-description: 扫描 src/ 生成组件文档初稿，供 CI 定时运行
+description: Scan frontend src directories and generate docs/components.md so Claude Code can reuse existing Vue/React components during design-to-code generation.
 model: sonnet
 disable-model-invocation: true
 ---

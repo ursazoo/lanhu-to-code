@@ -1,6 +1,6 @@
 ---
 name: code-format
-description: 将蓝湖 HTML/CSS 转为项目框架代码
+description: Convert Lanhu HTML/CSS output into project frontend code for Vue, React, or the detected stack, with component reuse and design token mapping.
 model: sonnet
 ---
 

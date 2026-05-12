@@ -1,6 +1,6 @@
 ---
 name: design-to-code
-description: 蓝湖设计稿转框架代码，三阶段工作流入口
+description: Lanhu to Code workflow for Claude Code. Convert Lanhu design URLs into Vue/React frontend code with component reuse, design token mapping, TODO-safe business logic, and optional code review.
 ---
 
 # design-to-code
