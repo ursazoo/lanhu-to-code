@@ -142,7 +142,6 @@ Paste a Lanhu page URL when prompted.
 - [ ] Add a real React example generated from a Lanhu page.
 - [ ] Add Claude Code plugin marketplace installation support.
 - [ ] Add Figma adapter notes for teams that use both Figma and Lanhu.
-- [ ] Add English and Chinese demo posts for launch.
 
 ## Architecture
 
